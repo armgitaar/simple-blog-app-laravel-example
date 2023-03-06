@@ -59,4 +59,16 @@ class BlogPost extends Model
         static::addGlobalScope(new DeletedAdminScope());
         parent::boot();
     }
+    
+    public function toSearchableArray()
+    {
+          $array = $this->toArray();
+
+          return [
+            'id' => $array['id'],
+            'title' => $array['title'],
+            'body'=> $array['body']
+           ];
+    }
+    
 }
