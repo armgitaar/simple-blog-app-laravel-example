@@ -66,7 +66,9 @@ class BlogPost extends Model
 
           return [
             'id' => $array['id'],
-            'title' => $array['title']
+            'user_id' => $array['user_id'],
+            'title' => $array['title'],
+            'content' => $array['content']
            ];
     }
     
